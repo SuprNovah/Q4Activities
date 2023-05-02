@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Q4 Seatwork 2</title>
+</head>
+<body style="font-family: sans-serif; background: yellowgreen;">
+	<h1>Temperature Converter</h1>
+	<p id="DT"></p>
+
+	<script>
+		const D = new Date();
+		document.getElementById('DT').innerHTML = D;
+
+	</script>
+
+<p>Fahrenheit>Celsius</p>
+
+	<table border="2">
+	<tr>
+		<td>Fahrenheit (F)</td>
+		<td>Celcius (C)</td>
+		<td>Description</td>
+	</tr>
+	<tr>
+		<td>
+			<form>
+				<input type="text" id="numl"><br><br>
+				<button type="submit" onclick="Compute()" class="btn btn-dark btn-block">
+				Calculate</button>
+			</form>
+		</td>
+
+	<script type="text/javascript">
+		function Compute(){
+			let num1 = document.getElementById("num1").value;
+			let part = Number(num1 - 32);
+			let product = Number(part * 5/9)
+
+	window.alert("The Conversion from Fahrenheit to Celcius is: " + product);
+		}
+</script>
+</body>
+</html>
