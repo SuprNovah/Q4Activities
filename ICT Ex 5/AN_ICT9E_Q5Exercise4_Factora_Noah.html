@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Q4 Exercise 5</title>
+
+
+</head>
+<style type="text/css">
+img {
+  width: 150px;
+}
+
+</style>
+<body>
+	<div class="container mt-3">
+	<h2>What makes a light bulb light up?</h2>
+	<p>Light bulbs consist of only a few basic parts. The metal base has two metal contacts that connect to the ends of an electrical circuit. The metal contacts attach to two stiff wires, which themselves are connected by a thin metal filament. The filament is the thin wire you see in the middle of the light bulb, held up by a glass mount. All of this exists within a glass bulb filled with an inert gas, such as argon.</p>
+
+	<audio id="audio" src="electic-hum.mp3"></audio>
+	<button class= "btn btn-success" onmouseover="On()">Switch on Lights</button>
+	<img src="turnoff.png" id="Bulb">
+
+	<h2>The Ohm's Law Equation</h2>
+	<p>Ohm’s principal discovery was that the amount of electric current through a metal conductor in a circuit is directly proportional to the voltage impressed across it, for any given temperature. Ohm expressed his discovery in the form of a simple equation, describing how voltage, current, and resistance interrelate: <kbd>Voltage<(E) = Current(I) in a circuot, given valures of volate (E) and reistance (R):</p>
+	<img src="fig2.png" id='fig2'><br>
+	<p>Calculate the amount of current (I) in a circuit, given values of voltage (E) and resistance (R):</p>
+	<div class="row">
+		<div class="col-6">
+			Enter Voltage(E):<input type="text" name="V" class="form-control"><br>
+			Enter Resistance(R):<input type="text" name="R" class="form-control"><br>
+			<input type="submit" value="Compute" class="btn btn-secondary">
+		</div>	
+
+
+	<script type="text/javascript">
+		function On(){
+			document.getElementById('Bulb').src = "turnon.png";
+			document.getElementById('audio').play();
+		}
+		function Off(){
+			document.getElementById('Bulb').src = "turnoff.png";
+			document.getElementById('audio').pause();
+		}
+		function Compute(){
+			Let Voltage = document.getElementByName('V').value;
+			Let Resistance = document.getElementByName('R').value;
+			Let Current = Voltage/Resistance;
+			document.getElementById('Output').innerHTML = "The Current(I) is " + Current;
+		}
+	</script>
+
+	<p>Sources: <br>
+		<a href="https://www.allaboutcircuits.com/textbook/direct-current/chpt-2/voltage-current-resistance-relate/">https://www.allaboutcircuits.com/textbook/direct-current/chpt-2/voltage-current-resistance-relate/
+
+
+	<p>Source: <a href="https://www.wonderopolis.org/wonder/what-makes-a-light-bulb-light-up">
+	https://www.wonderopolis.org/wonder/what-makes-a-light-bulb-light-up</a></p>
+	</div>
+</body>
+</html>
