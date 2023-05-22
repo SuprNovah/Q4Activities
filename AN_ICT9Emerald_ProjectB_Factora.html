@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>Project B</title>
+
+
+  <style>
+    .container {
+      margin-top: 70px;
+    }
+  </style>
+
+
+</head>
+<body class="text-dark bg-light">
+  <div class="container">
+    <h5 class="text-center">mm to m</h5>
+
+    </div>
+    <div class="form-group">
+    <input type="number" id="inputCentimeters" class="form-control" step="any" placeholder="Centimeters">
+    </div>
+
+    
+    <div style="text-align:center;">
+    <button onclick="convertCentimetersToMeters()">Convert to Meters</button>
+    <div id="result"></div>
+
+
+  <script>
+    function convertCentimetersToMeters() {
+      var centimeters = document.getElementById('inputCentimeters').value;
+      if (!centimeters) {
+        document.getElementById('result').innerHTML = "...";
+        return;
+      }
+      var meters = centimeters / 1000;
+      document.getElementById('result').innerHTML = centimeters + ' mm is equal to ' + meters + ' meters.';
+    }
+
+  </script>
+</body>
+</html>
